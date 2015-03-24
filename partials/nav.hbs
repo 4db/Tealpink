@@ -1,0 +1,37 @@
+
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="{{@blog.url}}" class="brand-logo red-text text-lighten-2">
+        {{@blog.title}}
+      </a>
+
+      <ul class="right hide-on-med-and-down">
+        <li class="navb">
+          <a href="#dev" class="teal-text">
+           Dev
+          </a>
+        </li>
+
+
+        <li>
+          <a href="{{@blog.url}}/about/" class="teal-text">
+           About
+          </a>
+        </li>
+
+
+        <li>
+          <a href="{{@blog.url}}/rss/" class="teal-text">
+           Rss
+          </a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#dev" class="teal-text">Dev</a></li>
+        <li><a href="{{@blog.url}}/about/" class="teal-text">About</a></li>
+        <li><a href="{{@blog.url}}/rss/" class="teal-text">Rss</a></li>
+      </ul>
+      <a href="{{url}}" data-activates="nav-mobile" class="right button-collapse show-on-small"><i class="mdi-navigation-menu teal-text"></i></a>
+    </div>
+  </nav>

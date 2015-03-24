@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/materialize.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+<body class="{{body_class}}">
+
+    <!-- GOOGLE ANALYTICS -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-55760234-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+  <div class="parallax-container valign-wrapper" id="about">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">{{@blog.description}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src={{asset "background.png"}}  alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h6 class="white-text">About</h6>
+          <p class="grey-text text-lighten-4">
+            Alex Dubinchyk, Full Stack Web Developer from Eeastern Europe(Belarus),
+            currently living and working in Bay Area(USA).
+          </p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h6 class="white-text">Connect</h6>
+          <ul>
+            <li class="white-text"><i class="mdi-communication-email show-on-small"></i> 4alexdb@gmail.com</li>
+            <li><a class="white-text" href="https://www.linkedin.com/pub/alex-dubinchyk/a0/54b/760"><i class="fa fa-linkedin-square show-on-small"></i> LinkedIn</a></li>
+            <li>
+            <a class="white-text" href="https://twitter.com/4alexdb"><i class="fa fa-twitter-square show-on-medium"></i> 4alexdb</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h6 class="white-text">Resume</h6>
+          <ul>
+            <li><a class="white-text" href="#!"><i class="fa fa-file-pdf-o show-on-small"></i> PDF</a></li>
+            <li><a class="white-text" href="#!"><i class="fa fa-file-word-o show-on-small"></i> Word docx</a></li>
+            <li><a class="white-text" href="#!"><i class="fa fa-file-code-o show-on-small"></i> rtf</a></li>
+            <li><a class="white-text" href="#!"><i class="fa fa-file-code-o show-on-small"></i> Google doc</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      <b><a href="http://aldb.github.io">aldb</a></b>
+       © 2015
+       <a class="brown-text text-lighten-3" href="ghost.org">Ghost</a>,
+       <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+    <footer class="site-footer clearfix">
+    </footer>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript files }}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/materialize.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/init.js"}}"></script>
+
+</body>
+</html>

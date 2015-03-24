@@ -1,0 +1,20 @@
+<div class="row">
+
+  <div class="col s2">
+
+    <p class="left-align">
+      {{#if prev}}
+        <a href="{{page_url prev}}" class="red-text text-lighten-2">&larr;NEWER POSTS</a>
+      {{/if}}
+    </p>
+  </div>
+  <div class="col s8"><p class="center-align">PAGE {{page}} OF {{pages}}</p></div>
+  <div class="col s2">
+
+    <p class="right-align">
+      {{#if next}}
+        <a href="{{page_url next}}" class="red-text text-lighten-2">ORDER POSTS &rarr;</a>
+      {{/if}}
+    </p>
+  </div>
+</div>

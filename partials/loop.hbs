@@ -1,0 +1,35 @@
+<span id="dev"></span>
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+
+<div class="row">
+  <div class="col s12 center">
+    <div class="col s12 m5 l7">
+      <a href="{{url}}" class="black-text">
+        <h4 class="left-align">{{{title}}}</h4>
+      </a>
+
+      <h6 class="left-align grey-text"><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+
+
+
+      <i class="mdi-action-loyalty red-text text-lighten-2"></i>
+      {{tags prefix=""}}
+      </h6>
+    </div>
+    <div class="col s12 m5 l5">
+      <p class="left-align light">{{excerpt words="20"}} ... <a href="{{url}}" class="red-text text-lighten-2">KEEP READING <i class="mdi-maps-local-cafe"></i> </a></p>
+    </div>
+
+    <br>
+    <div class="progress">
+      <div class="indeterminate"></div>
+    </div>
+    <br>
+    <br>
+
+  </div>
+</div>
+{{/foreach}}
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}
