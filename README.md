@@ -1,2 +1,1 @@
-# Tealpink
-CMS ghost custom theme
+CMS ghost theme
